@@ -1,7 +1,7 @@
 import BaseService from './core/BaseService';
 
 class PokemonService extends BaseService {
-  numPokemons = 964;
+  numPokemons = 1100;
 
   async fetch() {
     const {
@@ -13,6 +13,23 @@ class PokemonService extends BaseService {
     }
 
     return results;
+  }
+
+  async getPokemon(url) {
+    const { data } = await this.get(url);
+    return data;
+  }
+
+  async getGenerations() {
+    const {
+      data: { results },
+    } = await this.get('generation/');
+    return results;
+  }
+
+  async getGeneration(id) {
+    const { data } = await this.get(`generation/${id}`);
+    return data;
   }
 }
 

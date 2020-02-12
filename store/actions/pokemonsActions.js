@@ -8,3 +8,11 @@ export const fetchPokemons = () => async dispatch => {
     pokemons,
   });
 };
+
+export const setPokemon = url => async dispatch => {
+  let pokemon = await PokemonService.getPokemon('pokemon/' + url);
+  dispatch({
+    type: types.SET_POKEMON,
+    pokemon,
+  });
+};

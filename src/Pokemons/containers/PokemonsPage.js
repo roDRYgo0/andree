@@ -52,13 +52,6 @@ const styles = StyleSheet.create({
   search: {
     margin: 10,
   },
-  title: {
-    alignSelf: 'flex-start',
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginLeft: 10,
-    marginTop: 7,
-  },
 });
 
 PokemonsPage.propTypes = {};

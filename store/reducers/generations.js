@@ -5,9 +5,9 @@ const INITIAL_STATE = [];
 
 const handlers = {};
 
-handlers[types.FETCH_POKEMONS] = (state, { pokemons }) => {
-  if (state.length !== pokemons.length) {
-    return [...pokemons];
+handlers[types.FETCH_GENERATIONS] = (state, { generations }) => {
+  if (state.length !== generations.length) {
+    return [...generations];
   } else {
     return state;
   }
